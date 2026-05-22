@@ -1,0 +1,70 @@
+body {
+    background-color: #0b5d1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.hand {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.card {
+    background: white;
+    color: black;
+    width: 70px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#hit-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+#stand-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#restart-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+#message {
+    margin-top: 20px;
+}
