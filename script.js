@@ -121,6 +121,21 @@ function startGame() {
 
     document.getElementById("message").textContent = "";
 
+    const playerScore = calculateScore(playerHand);
+    const dealerScore = calculateScore(dealerHand);
+
+    // Rule Check: Natural Blackjack at the start of the game
+    if (playerScore === 21 || dealerScore === 21) {
+        if (playerScore === 21 && dealerScore === 21) {
+            endGame("Both have Blackjack! Push! 🤝");
+        } else if (playerScore === 21) {
+            endGame("Blackjack! You win! 🃏🎉");
+        } else if (dealerScore === 21) {
+            endGame("Dealer has Blackjack! Dealer wins 😔");
+        }
+        return; // Stop execution so players can't hit/stand on a finished game
+    }
+
     renderHands();
 }
 
